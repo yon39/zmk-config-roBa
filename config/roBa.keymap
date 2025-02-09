@@ -91,10 +91,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                          &kp T                                                        &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F                          &kp G        &kp LC(V)                        &kp EQUAL      &kp H        &kp J  &kp K     &kp L     &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                          &kp B        &kp LC(C)                        &kp SEMICOLON  &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 5 COMMA
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_SHIFT PERIOD
+&kp JP_Q             &kp JP_W         &kp JP_E         &kp JP_R                          &kp JP_T                                                        &kp JP_Y        &kp JP_U  &kp JP_I     &kp JP_O     &kp JP_P
+&kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LC(V)                        &kp JP_EQUAL      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
+&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LC(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 5 JP_COMMA
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 JP_MHEN  &lt 2 SPACE  &lt_to_layer_0 3 JP_HENK      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_SHIFT JP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -102,10 +102,10 @@
 
         NUM {
             bindings = <
-&kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS     &kp TILDE         &kp BACKSLASH                               &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp SEMICOLON         &kp COLON              &kp AT_SIGN   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ESCAPE      &kp F13  &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS
-&kp LEFT_SHIFT        &kp COMMA              &kp PERIOD    &kp SLASH         &kp UNDERSCORE     &kp TAB         &trans   &kp N0        &kp N1  &kp N2  &kp N3  &kp PERIOD
-&kp LEFT_CONTROL      &kp LEFT_WIN           &kp LEFT_ALT  &trans            &trans             &trans          &trans   &trans                                &mt RIGHT_SHIFT EQUAL
+&kp JP_LPAR  &kp JP_RPAR  &kp JP_MINUS     &kp JP_CARET         &kp JP_YEN                               &kp JP_SLASH     &kp N7  &kp N8  &kp N9  &kp JP_MINUS
+&kp JP_SEMI         &kp JP_COLON              &kp JP_AT   &kp JP_LBKT  &kp JP_RBKT  &kp ESCAPE      &trans  &kp JP_ASTRK  &kp N4  &kp N5  &kp N6  &kp JP_PLUS
+&kp LEFT_SHIFT        &kp JP_COMMA              &kp JP_DOT    &kp JP_SLASH         &kp JP_BSLH     &kp TAB         &trans   &kp N0        &kp N1  &kp N2  &kp N3  &kp JP_DOT
+&kp LEFT_CONTROL      &kp LEFT_WIN           &kp LEFT_ALT  &trans            &trans             &trans          &trans   &trans                                &mt RIGHT_SHIFT JP_EQUAL
             >;
         };
 
@@ -113,7 +113,7 @@
             bindings = <
 &kp ESCAPE      &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp F9  &kp F10                           &kp PRINTSCREEN  &kp LC(LG(LEFT_ARROW))  &kp LG(LC(D))   &kp LG(LC(RIGHT_ARROW))  &kp LS(LG(S))
 &kp TAB         &kp LG(TAB)             &kp LG(LC(TAB))          &kp F6  &kp F7   &kp F8       &kp HOME    &kp PAGE_UP      &mkp MB4                &kp UP_ARROW    &mkp MB5                 &mkp MB3
-&kp LEFT_SHIFT  &kp INT_MUHENKAN        &kp INT_HENKAN           &kp F4  &kp F5   &kp F11      &kp END     &kp PAGE_DOWN    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &login
+&kp LEFT_SHIFT  &kp JP_MHEN        &kp JP_HENK           &kp F4  &kp F5   &kp F11      &kp END     &kp PAGE_DOWN    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &login
 &kp LCTRL       &kp LEFT_WIN            &kp LEFT_ALT             &trans  &trans   &trans       &kp DELETE  &trans                                                                            &bitw
             >;
         };
