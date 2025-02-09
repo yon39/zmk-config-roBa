@@ -67,11 +67,9 @@
         ;
     };
 
-    &sensor_behavior {
-        sensor_behavior_set_trackball_dpi {
-            compatible = "zmk,behavior-sensor-set-dpi";
-            label = "Trackball DPI";
-        };
+    sensor_behavior_set_trackball_dpi {
+        compatible = "zmk,behavior-sensor-set-dpi";
+        label = "Trackball DPI";
     };
 
     &trackball {
