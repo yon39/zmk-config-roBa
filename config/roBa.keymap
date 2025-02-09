@@ -76,7 +76,7 @@
         cursor_speed_down: cursor_speed_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp PG_DOWN>;  // `Page Down` を押して速度ダウン
+            bindings = <&inc_dec_kp PAGE_DOWN>;
             label = "CURSOR_SPEED_DOWN";
         };
     };
