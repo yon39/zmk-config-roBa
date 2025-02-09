@@ -103,9 +103,8 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 JP_MHEN  &lt 2 SPACE  &lt_to_layer_0 3 JP_HENK      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_SHIFT JP_DOT
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-            sensor-bindings = <&cursor_speed_up>;  // カーソル速度を上げるボタンを追加
-            sensor-bindings = <&cursor_speed_down>;  // カーソル速度を下げるボタンを追加
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>, <&cursor_speed_up>, <&cursor_speed_down>;
+
         };
 
         NUM {
