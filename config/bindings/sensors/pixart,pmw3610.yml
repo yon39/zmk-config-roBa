@@ -1,9 +1,0 @@
-# pixart,pmw3610.yml
-description: PMW3610 Trackball Sensor
-compatible: "pixart,pmw3610"
-
-properties:
-  sensitivity:
-    type: int
-    description: "Adjusts the cursor movement sensitivity."
-    default: 600
