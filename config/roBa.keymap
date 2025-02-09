@@ -85,8 +85,8 @@
         default_layer {
             bindings = <
 &kp JP_Q             &kp JP_W         &kp JP_E         &kp JP_R                          &kp JP_T                                                        &kp JP_Y        &kp JP_U  &kp JP_I     &kp JP_O     &kp JP_P
-&kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LC(V)                        &kp JP_EQUAL      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
-&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LC(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 5 JP_COMMA
+&kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LC(V)                        &sensor_behavior_set_trackball_dpi 800      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
+&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LC(C)                        &sensor_behavior_set_trackball_dpi 1600  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 5 JP_COMMA
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 JP_MHEN  &lt 2 SPACE  &lt_to_layer_0 3 JP_HENK      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_SHIFT JP_DOT
             >;
 

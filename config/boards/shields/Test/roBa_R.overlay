@@ -62,4 +62,11 @@
     };
 };
 
+&keymap {
+    assigned_keys {
+        dpi_up: binding = <&sensor_behavior_set_trackball_dpi 1600>; // DPIを1600に変更
+        dpi_down: binding = <&sensor_behavior_set_trackball_dpi 800>; // DPIを800に変更
+    };
+};
+
 

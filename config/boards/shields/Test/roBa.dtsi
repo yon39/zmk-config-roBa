@@ -111,4 +111,15 @@
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <10>;
     };
+	
+	&sensor_behavior {
+        sensor_behavior_set_trackball_dpi {
+            compatible = "zmk,behavior-sensor-set-dpi";
+            label = "Trackball DPI";
+        };
+    };
+	
+	&trackball {
+        dpi-options = <800 1200 1600>;  // DPI変更の選択肢
+    };
 };
