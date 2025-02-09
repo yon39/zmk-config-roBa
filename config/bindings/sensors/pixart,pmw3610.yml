@@ -1,35 +1,9 @@
-# SPDX-License-Identifier: MIT
-description: PixArt PMW3610 Trackball Sensor
-
+# pixart,pmw3610.yml
+description: PMW3610 Trackball Sensor
 compatible: "pixart,pmw3610"
 
 properties:
-  reg:
+  sensitivity:
     type: int
-    required: true
-    description: "SPI Chip Select"
-
-  spi-max-frequency:
-    type: int
-    required: true
-    description: "Max SPI frequency"
-
-  irq-gpios:
-    type: phandle-array
-    required: false
-    description: "Interrupt GPIO pin"
-
-  automouse-layer:
-    type: int
-    required: false
-    description: "Layer to enable mouse movement"
-
-  scroll-layers:
-    type: int
-    required: false
-    description: "Layer to enable scrolling"
-
-  sensitivity:  # ✅ 追加するプロパティ
-    type: int
-    required: false
-    description: "Trackball sensitivity (default: 600, higher = faster)"
+    description: "Adjusts the cursor movement sensitivity."
+    default: 600
