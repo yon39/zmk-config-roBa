@@ -69,14 +69,14 @@
         cursor_speed_up: cursor_speed_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PG_UP>;  // `Page Up` を押して速度アップ
+            bindings = <&macro_press &kp PG_UP>;  // `Page Up` を押して速度アップ-,
             label = "CURSOR_SPEED_UP";
         };
 
         cursor_speed_down: cursor_speed_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PG_DOWN>;  // `Page Down` を押して速度ダウン
+            bindings = <&macro_press &kp PG_DOWN>;  // `Page Down` を押して速度ダウン
             label = "CURSOR_SPEED_DOWN";
         };
     };
