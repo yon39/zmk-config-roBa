@@ -27,35 +27,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-    };
-
     macros {
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
@@ -74,7 +45,7 @@
         bitw: bitw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(I) &kp N &kp N &kp U &kp E &kp N &kp D &kp O &kp AT &kp N3 &kp N6 &kp N6 &kp N4>;
+            bindings = <&none &kp LS(I) &kp N &kp N &kp U &kp E &kp N &kp D &kp O &kp JP_AT &kp N3 &kp N6 &kp N6 &kp N4>;
             label = "BITW";
         };
 
