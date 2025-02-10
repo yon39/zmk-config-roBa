@@ -51,33 +51,79 @@
 
     };
 
-    behaviors {
-        bt_to_layer {
-            compatible = "zmk,behavior-bt-profile-changed";
-            label = "BT_TO_LAYER";
-            bindings = <
-                &macro win_default_layer 0,
-                &macro win_default_layer 1,
-                &macro mac_default_layer 2,
-                &macro ipad_default_layer 3,
-                &macro win_default_layer 4
-            >;
+   behaviors {
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <20>;
+        };
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        win_default_layer {
+        default_layer {
             bindings = <
 &kp JP_Q             &kp JP_W         &kp JP_E         &kp JP_R                          &kp JP_T                                                        &kp JP_Y        &kp JP_U  &kp JP_I     &kp JP_O     &kp JP_P
 &kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LC(V)                        &kp JP_EQUAL      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
-&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LC(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 9 JP_COMMA
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 JP_MHEN  &lt 2 SPACE  &lt_to_layer_0 9 JP_HENK      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_SHIFT JP_DOT
+&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LC(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 JP_MHEN  &lt 5 SPACE  &lt_to_layer_0 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                             &mt RIGHT_SHIFT JP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
 
+        };
+
+        win1_layer {
+            bindings = <
+&kp JP_Q             &kp JP_W         &kp JP_E         &kp JP_R                          &kp JP_T                                                        &kp JP_Y        &kp JP_U  &kp JP_I     &kp JP_O     &kp JP_P
+&kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LC(V)                        &kp JP_EQUAL      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
+&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LC(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 JP_MHEN  &lt 5 SPACE  &lt_to_layer_0 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                             &mt RIGHT_SHIFT JP_DOT
+            >;
+        };
+				
+        mac_layer {
+            bindings = <
+&kp JP_Q             &kp JP_W         &kp JP_E         &kp JP_R                          &kp JP_T                                                        &kp JP_Y        &kp JP_U  &kp JP_I     &kp JP_O     &kp JP_P
+&kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LG(V)                        &kp JP_EQUAL      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
+&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LG(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
+&kp LGUI         &kp LCTRL  &kp LALT  &lt_to_layer_0 6 INT4  &lt 7 SPACE  &lt_to_layer_0 10 INT5      &kp BACKSPACE  &lt 7 ENTER                             &mt RIGHT_SHIFT JP_DOT
+            >;
+        };
+
+        ipad_layer {
+            bindings = <
+&kp JP_Q             &kp JP_W         &kp JP_E         &kp JP_R                          &kp JP_T                                                        &kp JP_Y        &kp JP_U  &kp JP_I     &kp JP_O     &kp JP_P
+&kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LG(V)                        &kp JP_EQUAL      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
+&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LG(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
+&kp LGUI         &kp LCTRL  &kp LALT  &lt_to_layer_0 8 INT4  &lt 9 SPACE  &lt_to_layer_0 10 INT5      &kp BACKSPACE  &lt 9 ENTER                             &mt RIGHT_SHIFT JP_DOT
+            >;
         };
 
         win_NUM {
@@ -98,17 +144,6 @@
             >;
         };
 
-        mac_default_layer {
-            bindings = <
-&kp JP_Q             &kp JP_W         &kp JP_E         &kp JP_R                          &kp JP_T                                                        &kp JP_Y        &kp JP_U  &kp JP_I     &kp JP_O     &kp JP_P
-&kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LG(V)                        &kp JP_EQUAL      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
-&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LG(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 9 JP_COMMA
-&kp LGUI         &kp LCTRL  &kp LALT  &lt_to_layer_0 4 INT4  &lt 5 SPACE  &lt_to_layer_0 9 INT5      &kp BACKSPACE  &lt 5 ENTER                             &mt RIGHT_SHIFT JP_DOT
-            >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-
-        };
 
         mac_NUM {
             bindings = <
@@ -128,17 +163,6 @@
             >;
         };
 
-        ipad_default_layer {
-            bindings = <
-&kp JP_Q             &kp JP_W         &kp JP_E         &kp JP_R                          &kp JP_T                                                        &kp JP_Y        &kp JP_U  &kp JP_I     &kp JP_O     &kp JP_P
-&kp JP_A             &kp JP_S         &kp JP_D         &kp JP_F                          &kp JP_G        &kp LG(V)                        &kp JP_EQUAL      &kp JP_H        &kp JP_J  &kp JP_K     &kp JP_L     &kp JP_MINUS
-&mt LEFT_SHIFT JP_Z  &kp JP_X         &kp JP_C         &kp JP_V                          &kp JP_B        &kp LG(C)                        &kp JP_PLUS  &kp JP_N        &kp JP_M  &mkp MB1  &mkp MB2  &lt 9 JP_COMMA
-&kp LGUI         &kp LCTRL  &kp LALT  &lt_to_layer_0 7 INT4  &lt 8 SPACE  &lt_to_layer_0 9 INT5      &kp BACKSPACE  &lt 8 ENTER                             &mt RIGHT_SHIFT JP_DOT
-            >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-
-        };
 
         ipad_NUM {
             bindings = <
