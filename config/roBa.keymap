@@ -172,7 +172,7 @@
 &kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S   &kp JP_D  &kp JP_F               &kp JP_G     &kp LG(V)                   &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X   &kp JP_C  &kp JP_V               &kp JP_B     &kp LG(C)                   &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
-&kp LGUI             &kp LCTRL  &kp LALT  & 8 INT4  &lt 9 SPACE  & 10 INT5      &kp BACKSPACE  &lt 9 ENTER                                &mt RIGHT_SHIFT JP_DOT
+&kp LGUI             &kp LCTRL  &kp LALT  &lt 8 INT4  &lt 9 SPACE  &lt 10 INT5      &kp BACKSPACE  &lt 9 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
         };
 
