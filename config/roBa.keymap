@@ -29,6 +29,13 @@
 
 / {
     macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+
         login: login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -73,7 +80,7 @@
             #binding-cells = <0>;
             bindings =
                 <&tog_off 1 &tog_off 2 &tog_off 3>,
-                <&macro_wait_time 300>,
+                <&macro_wait_time 400>,
                 <&bt BT_SEL 2>,
                 <&macro_wait_time 700>,
                 <&tog_on 2>;
