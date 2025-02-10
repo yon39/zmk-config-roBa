@@ -56,10 +56,10 @@
             compatible = "zmk,behavior-bt-profile-changed";
             label = "BT_TO_LAYER";
             bindings = <
-                &to win_default_layer
-                &to win_default_layer
-                &to mac_default_layer
-                &to ipad_default_layer
+                &to win_default_layer,
+                &to win_default_layer,
+                &to mac_default_layer,
+                &to ipad_default_layer,
                 &to win_default_layer
             >;
         };
