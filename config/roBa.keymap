@@ -55,6 +55,7 @@
         bt_to_layer {
             compatible = "zmk,behavior-bt-profile-changed";
             label = "BT_TO_LAYER";
+			#binding-cells = <1>;
             bindings = <
                 &to win_default_layer 0
                 &to win_default_layer 1
