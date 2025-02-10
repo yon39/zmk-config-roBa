@@ -29,13 +29,6 @@
 
 / {
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
         login: login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -80,9 +73,9 @@
             #binding-cells = <0>;
             bindings =
                 <&tog_off 1 &tog_off 2 &tog_off 3>,
-                <&macro_wait_time 200>,
+                <&macro_wait_time 300>,
                 <&bt BT_SEL 2>,
-                <&macro_wait_time 500>,
+                <&macro_wait_time 700>,
                 <&tog_on 2>;
 
             label = "BT2";
@@ -160,7 +153,7 @@
 
         mac_layer {
             bindings = <
-&kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
+&kp JP_W             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S   &kp JP_D  &kp JP_F               &kp JP_G     &kp LG(V)                   &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X   &kp JP_C  &kp JP_V               &kp JP_B     &kp LG(C)                   &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
 &kp LGUI             &kp LCTRL  &kp LALT  &lt_to_layer_0 6 INT4  &lt 7 SPACE  &lt_to_layer_0 10 INT5      &kp BACKSPACE  &lt 7 ENTER                                &mt RIGHT_SHIFT JP_DOT
