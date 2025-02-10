@@ -5,8 +5,6 @@
 
 #include "keymap.h"
 
-#define MOUSE 4
-#define SCROLL 5
 #define NUM 6
 
 #define U_MOUSE_MOVE_MAX 5000  // 新しい最大速度設定（デフォルトは600）
