@@ -80,9 +80,9 @@
             #binding-cells = <0>;
             bindings =
                 <&tog_off 1 &tog_off 2 &tog_off 3>,
-                <&macro_wait_time 400>,
+                <&macro_wait_time 200>,
                 <&bt BT_SEL 2>,
-                <&macro_wait_time 700>,
+                <&macro_wait_time 500>,
                 <&tog_on 2>;
 
             label = "BT2";
@@ -143,7 +143,7 @@
 &kp JP_Q             &kp JP_W      &kp JP_E      &kp JP_R                  &kp JP_T                                                   &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S      &kp JP_D      &kp JP_F                  &kp JP_G     &kp LC(V)                      &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X      &kp JP_C      &kp JP_V                  &kp JP_B     &kp LC(C)                      &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
-&kp LCTRL            &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 JP_MHEN  &lt 5 SPACE  &lt_to_layer_0 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                                &mt RIGHT_SHIFT JP_DOT
+&kp LCTRL            &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 JP_MHEN  &lt 5 SPACE  &lt 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -154,16 +154,16 @@
 &kp JP_Q             &kp JP_W      &kp JP_E      &kp JP_R                  &kp JP_T                                                   &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S      &kp JP_D      &kp JP_F                  &kp JP_G     &kp LC(V)                      &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X      &kp JP_C      &kp JP_V                  &kp JP_B     &kp LC(C)                      &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
-&kp LCTRL            &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 JP_MHEN  &lt 5 SPACE  &lt_to_layer_0 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                                &mt RIGHT_SHIFT JP_DOT
+&kp LCTRL            &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 JP_MHEN  &lt 5 SPACE  &lt 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
         };
 
         mac_layer {
             bindings = <
-&kp JP_W             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
+&kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S   &kp JP_D  &kp JP_F               &kp JP_G     &kp LG(V)                   &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X   &kp JP_C  &kp JP_V               &kp JP_B     &kp LG(C)                   &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
-&kp LGUI             &kp LCTRL  &kp LALT  &lt_to_layer_0 6 INT4  &lt 7 SPACE  &lt_to_layer_0 10 INT5      &kp BACKSPACE  &lt 7 ENTER                                &mt RIGHT_SHIFT JP_DOT
+&kp LGUI             &kp LCTRL  &kp LALT  &lt 6 INT4  &lt 7 SPACE  &lt 10 INT5      &kp BACKSPACE  &lt 7 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
         };
 
@@ -172,7 +172,7 @@
 &kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S   &kp JP_D  &kp JP_F               &kp JP_G     &kp LG(V)                   &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X   &kp JP_C  &kp JP_V               &kp JP_B     &kp LG(C)                   &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
-&kp LGUI             &kp LCTRL  &kp LALT  &lt_to_layer_0 8 INT4  &lt 9 SPACE  &lt_to_layer_0 10 INT5      &kp BACKSPACE  &lt 9 ENTER                                &mt RIGHT_SHIFT JP_DOT
+&kp LGUI             &kp LCTRL  &kp LALT  & 8 INT4  &lt 9 SPACE  & 10 INT5      &kp BACKSPACE  &lt 9 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
         };
 
