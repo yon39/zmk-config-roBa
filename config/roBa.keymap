@@ -85,20 +85,6 @@
 
             label = "BT3";
         };
-		
-		pmw3610_cpi_inc: pmw3610_cpi_inc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sensor_set_param PMW3610_CPI 100>;
-            label = "Increase CPI by 100";
-        };
-
-        pmw3610_cpi_dec: pmw3610_cpi_dec {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sensor_set_param PMW3610_CPI -100>;
-            label = "Decrease CPI by 100";
-        };
     };
 
     behaviors {
@@ -123,20 +109,6 @@
             #binding-cells = <1>;
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
-        };
-		
-		cpi_increase: cpi_increase {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&pmw3610_cpi_inc>;
-            label = "CPI Increase";
-        };
-
-        cpi_decrease: cpi_decrease {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&pmw3610_cpi_dec>;
-            label = "CPI Decrease";
         };
 		
 		scroll_up_down_win: scroll_up_down_win {
@@ -257,7 +229,7 @@
             bindings = <
 &trans          &trans                  &trans  &trans                   &trans                       &bt0    &bt1    &bt2    &bt3    &bt BT_SEL 4
 &trans          &trans                  &trans  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans  &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &cpi_decrease  &cpi_increase  &trans  &trans  &bt BT_CLR
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans  &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
 &trans          &trans                  &trans  &trans                   &trans   &trans      &trans  &trans                          &bt BT_CLR_ALL
             >;
         };
