@@ -6,21 +6,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define NUM 6
-#define U_MOUSE_MOVE_MAX 5000  // 新しい最大速度設定（デフォルトは600）
-
-#undef MOVE_UP
-#undef MOVE_DOWN
-#undef MOVE_LEFT
-#undef MOVE_RIGHT
-
-#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
-#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
-#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
-
-&mmv {
-    time-to-max-speed-ms = <50>;  // 最大速度に達するまでの時間（デフォルトは500）
-};
 
 &mt {
     flavor = "balanced";
@@ -100,6 +85,20 @@
 
             label = "BT3";
         };
+		
+		pmw3610_cpi_inc: pmw3610_cpi_inc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sensor_set_param PMW3610_CPI 100>;
+            label = "Increase CPI by 100";
+        };
+
+        pmw3610_cpi_dec: pmw3610_cpi_dec {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sensor_set_param PMW3610_CPI -100>;
+            label = "Decrease CPI by 100";
+        };
     };
 
     behaviors {
@@ -110,14 +109,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
         };
 
         tog_on: toggle_layer_on_only {
@@ -133,6 +124,32 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
+		
+		cpi_increase: cpi_increase {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&pmw3610_cpi_inc>;
+            label = "CPI Increase";
+        };
+
+        cpi_decrease: cpi_decrease {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&pmw3610_cpi_dec>;
+            label = "CPI Decrease";
+        };
+		
+		scroll_up_down_win: scroll_up_down_win {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>; // Windows用 (通常の方向)
+        };
+
+        scroll_up_down_mac: scroll_up_down_mac {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>; // Mac用 (逆方向)
+        };
     };
 
     keymap {
@@ -146,7 +163,7 @@
 &kp LCTRL            &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 JP_MHEN  &lt 5 SPACE  &lt 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down_win>; // Windows用スクロール
         };
 
         win1_layer {
@@ -156,6 +173,8 @@
 &mt LEFT_SHIFT JP_Z  &kp JP_X      &kp JP_C      &kp JP_V                  &kp JP_B     &kp LC(C)                      &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
 &kp LCTRL            &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 JP_MHEN  &lt 5 SPACE  &lt 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
+			
+            sensor-bindings = <&scroll_up_down_win>; // Windows用スクロール
         };
 
         mac_layer {
@@ -163,8 +182,10 @@
 &kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S   &kp JP_D  &kp JP_F               &kp JP_G     &kp LG(V)                   &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X   &kp JP_C  &kp JP_V               &kp JP_B     &kp LG(C)                   &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
-&kp LGUI             &kp LCTRL  &kp LALT  &lt 6 INT4  &lt 7 SPACE  &lt 10 INT5      &kp BACKSPACE  &lt 7 ENTER                                &mt RIGHT_SHIFT JP_DOT
+&kp LGUI             &kp LCTRL  &kp LALT  &lt 6 LANG2  &lt 7 SPACE  &lt 10 LANG1      &kp BACKSPACE  &lt 7 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
+			
+			sensor-bindings = <&scroll_up_down_mac>; // Mac用スクロール (逆方向)
         };
 
         ipad_layer {
@@ -172,8 +193,10 @@
 &kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S   &kp JP_D  &kp JP_F               &kp JP_G     &kp LG(V)                   &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X   &kp JP_C  &kp JP_V               &kp JP_B     &kp LG(C)                   &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
-&kp LGUI             &kp LCTRL  &kp LALT  &lt 8 INT4  &lt 9 SPACE  &lt 10 INT5      &kp BACKSPACE  &lt 9 ENTER                                &mt RIGHT_SHIFT JP_DOT
+&kp LGUI             &kp LCTRL  &kp LALT  &lt 8 LANG2  &lt 9 SPACE  &lt 10 LANG1      &kp BACKSPACE  &lt 9 ENTER                                &mt RIGHT_SHIFT JP_DOT
             >;
+			
+			sensor-bindings = <&scroll_up_down_mac>; // Mac用スクロール (逆方向)
         };
 
         win_NUM {
@@ -234,11 +257,9 @@
             bindings = <
 &trans          &trans                  &trans  &trans                   &trans                       &bt0    &bt1    &bt2    &bt3    &bt BT_SEL 4
 &trans          &trans                  &trans  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans  &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans  &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &cpi_decrease  &cpi_increase  &trans  &trans  &bt BT_CLR
 &trans          &trans                  &trans  &trans                   &trans   &trans      &trans  &trans                          &bt BT_CLR_ALL
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
     };
 };
