@@ -129,7 +129,7 @@
 
         default_layer {
             bindings = <
-&kp JP_Q             &kp JP_W      &kp JP_E      &kp JP_R                  &kp JP_T                                                   &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
+&kp JP_Q             &kp JP_W      &kp JP_E      &kp JP_R                  &kp JP_T                                                   &kp JP_Y     &kp JP_U  &lt 10 JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S      &kp JP_D      &kp JP_F                  &kp JP_G     &kp LC(V)                      &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X      &kp JP_C      &kp JP_V                  &kp JP_B     &kp LC(C)                      &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
 &kp LCTRL            &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 JP_MHEN  &lt 5 SPACE  &lt 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                                &mt RIGHT_SHIFT JP_DOT
@@ -140,7 +140,7 @@
 
         win1_layer {
             bindings = <
-&kp JP_Q             &kp JP_W      &kp JP_E      &kp JP_R                  &kp JP_T                                                   &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
+&kp JP_Q             &kp JP_W      &kp JP_E      &kp JP_R                  &kp JP_T                                                   &kp JP_Y     &kp JP_U  &lt 10 JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S      &kp JP_D      &kp JP_F                  &kp JP_G     &kp LC(V)                      &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X      &kp JP_C      &kp JP_V                  &kp JP_B     &kp LC(C)                      &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
 &kp LCTRL            &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 JP_MHEN  &lt 5 SPACE  &lt 10 JP_HENK      &kp BACKSPACE  &lt 5 ENTER                                &mt RIGHT_SHIFT JP_DOT
@@ -151,7 +151,7 @@
 
         mac_layer {
             bindings = <
-&kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
+&kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &lt 10 JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S   &kp JP_D  &kp JP_F               &kp JP_G     &kp LG(V)                   &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X   &kp JP_C  &kp JP_V               &kp JP_B     &kp LG(C)                   &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
 &kp LGUI             &kp LCTRL  &kp LALT  &lt 6 LANG2  &lt 7 SPACE  &lt 10 LANG1      &kp BACKSPACE  &lt 7 ENTER                                &mt RIGHT_SHIFT JP_DOT
@@ -162,7 +162,7 @@
 
         ipad_layer {
             bindings = <
-&kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &kp JP_I  &kp JP_O  &kp JP_P
+&kp JP_Q             &kp JP_W   &kp JP_E  &kp JP_R               &kp JP_T                                                &kp JP_Y     &kp JP_U  &lt 10 JP_I  &kp JP_O  &kp JP_P
 &kp JP_A             &kp JP_S   &kp JP_D  &kp JP_F               &kp JP_G     &kp LG(V)                   &kp JP_EQUAL   &kp JP_H     &kp JP_J  &kp JP_K  &kp JP_L  &kp JP_MINUS
 &mt LEFT_SHIFT JP_Z  &kp JP_X   &kp JP_C  &kp JP_V               &kp JP_B     &kp LG(C)                   &kp JP_PLUS    &kp JP_N     &kp JP_M  &mkp MB1  &mkp MB2  &lt 10 JP_COMMA
 &kp LGUI             &kp LCTRL  &kp LALT  &lt 8 LANG2  &lt 9 SPACE  &lt 10 LANG1      &kp BACKSPACE  &lt 9 ENTER                                &mt RIGHT_SHIFT JP_DOT
