@@ -32,7 +32,7 @@
                 <&macro_release>,
                 <&mkp LCLK>,
                 <&macro_tap>,
-                <&tog_off 10 &sl 10>;  // ← 180ms でオートマウスレイヤーを解除
+                <&tog_off 10 &sl_custom 10>;  // ← 180ms でオートマウスレイヤーを解除
             label = "MACRO_LEFT_CLICK";
         };
 
@@ -138,7 +138,7 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>; // Mac用 (逆方向)
         };
 		
-		sl: sl {
+		sl_custom: sl_behavior {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             release-after-ms = <180>;  // 設定する時間
