@@ -142,6 +142,7 @@
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             release-after-ms = <180>;  // 設定する時間
+			bindings = <&macro_press>;
         };
     };
 
