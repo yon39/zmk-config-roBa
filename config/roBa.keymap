@@ -257,7 +257,7 @@
 		
 		MOUSE {
             bindings = <
-&return_to_default_layer kp JP_Q             &kp JP_W  &kp JP_E  &kp JP_R  &kp JP_T                              &kp JP_Y         &kp JP_U  &mkp MB3  &kp JP_O  &kp JP_P
+&return_to_default_layer JP_Q             &kp JP_W  &kp JP_E  &kp JP_R  &kp JP_T                              &kp JP_Y         &kp JP_U  &mkp MB3  &kp JP_O  &kp JP_P
 &return_to_default_layer JP_A             &kp JP_S  &kp JP_D  &kp JP_F  &kp JP_G  &kp LC(V)    &kp LC(V)      &mkp MB4  &mkp MB1  &mo 11     &mkp MB2  &mkp MB5
 &mt LEFT_SHIFT JP_Z  &kp JP_X  &kp JP_C  &kp JP_V  &kp JP_B  &kp LC(C)    &kp LC(C)      &kp JP_N         &mkp MB4  &mkp MB1     &mkp MB5  &lt 11 JP_COMMA
 &trans               &trans    &trans    &trans    &trans    &mo 11       &kp BACKSPACE  &kp ENTER                                         &mt RIGHT_SHIFT JP_DOT
